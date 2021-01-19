@@ -1,7 +1,7 @@
-const animal=require('mongoose');
-const Schema=animal.Schema;
+const wildAnimal=require('mongoose');
+const Schema=wildAnimal.Schema;
 
-const workoutPlan=new Schema({
+const trainingRegimen=new Schema({
     day:{
         type:Date,
         default:Date.now
@@ -10,15 +10,15 @@ const workoutPlan=new Schema({
         {
             type:{
                 type:String,
-                required:'get it done bruh!'
+                required:"soo, you're not gonna do anything today?"
             },
             name:{
                 type:String,
-                required:'no games bih!'
+                required:"soo, you don't even know what you're doing..."
             },
             duration:{
                 type:Number,
-                required:'you need to set a goal for yourself'
+                required:"if you don't set a goal, how will you know when you've arrived?"
             },
             weight:Number,
             reps:Number,
@@ -27,7 +27,7 @@ const workoutPlan=new Schema({
         },
     ]
 })
-const CircuitTraining=animal.model('workout',workoutPlan);
+const CircuitTraining=wildAnimal.model('workout',trainingRegimen);
 module.exports=CircuitTraining;
 
 //take my time and progress through this
