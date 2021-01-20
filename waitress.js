@@ -7,11 +7,11 @@ app.use(xprss.urlencoded({extended:true}));
 app.use(xprss.json());
 app.use(xprss.static('public'));
 
-wildAnimal.connect(process.env.MONGODB_URI||'mongodb://localhost/workoutApp',{
+wildAnimal.connect(process.env.MONGODB_URI||'mongodb://localhost/workout',{
     useNewUrlParser:true,
     useFindAndModify:false
 });
-app.use(require('not sure what goes here just yet'));
+app.use(require('./routing/api'));
 app.listen(PORT,()=>{
     console.log(`application live on port ${PORT}!`)
 });
