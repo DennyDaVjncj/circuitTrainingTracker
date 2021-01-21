@@ -1,7 +1,7 @@
 const wildAnimal=require('mongoose');
 const Schema=wildAnimal.Schema;
 
-const trainingRegimen=new Schema({
+const Workout=new Schema({
     day:{
         type:Date,
         default:Date.now
@@ -27,7 +27,7 @@ const trainingRegimen=new Schema({
         },
     ]
 })
-const CircuitTraining=wildAnimal.model('workout',trainingRegimen);
+const CircuitTraining=wildAnimal.model('workout',Workout);
 module.exports=CircuitTraining;
 
 //take my time and progress through this
