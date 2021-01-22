@@ -16,4 +16,3 @@ app.use(require('./routing/api'));
 app.listen(PORT,()=>{
     console.log(`application live on port ${PORT}!`)
 });
-//configure the entire server, model from mini project

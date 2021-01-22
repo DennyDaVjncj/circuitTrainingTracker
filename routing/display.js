@@ -4,6 +4,7 @@ const CircuitTraining=require('../models/workout');
 compass.get('/exercise',async(ask,echo)=>{
     try{
         const exerciseData=await CircuitTraining.findAll({
+            body
             //im just fetching the model data in essence
         })
         echo.json(exerciseData)
