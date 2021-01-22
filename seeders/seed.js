@@ -1,7 +1,7 @@
 let wildAnimal = require("mongoose");
 let CircuitTraining = require("../models/workout");
 
-wildAnimal.connect("mongodb://localhost/workout", {
+wildAnimal.connect("mongodb://localhost/trainingRegimen", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
