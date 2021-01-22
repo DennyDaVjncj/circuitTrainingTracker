@@ -1,7 +1,7 @@
 const compass=require('express').Router();
 const CircuitTraining=require('../models/workout');
 
-compass.get('/exercises',async(ask,echo)=>{
+compass.get('/exercise',async(ask,echo)=>{
     try{
         const exerciseData=await CircuitTraining.findAll({
             //im just fetching the model data in essence
