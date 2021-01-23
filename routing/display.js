@@ -1,6 +1,5 @@
 const compass=require('express').Router();
 const pathways=require('path');
-const CircuitTraining=require('../models/workout');
 
 compass.get('/exercise',(ask,echo)=>{
     echo.sendFile(pathways.join(__dirname,'../public/exercise.html'))
