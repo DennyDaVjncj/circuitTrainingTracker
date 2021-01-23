@@ -1,21 +1,29 @@
 const compass=require('express').Router();
 const CircuitTraining=require('../models/workout');
 
-compass.get('/api/exercise/range',(wish,granted)=>{
-    CircuitTraining.workout.find({})
+compass.get('/api/workout',(ask,echo)=>{
+    CircuitTraining.find({})
         .then(shortIntervalHighVelocity=>{
-            granted.json(shortIntervalHighVelocity);
+            echo.json(shortIntervalHighVelocity);
         }).catch(strain=>{
-            granted.json(strain.message);
+            echo.json(strain.message);
         })
 })
-
-compass.post('/api/exercise',({body},echo)=>{
+compass.post('/api/workout',({body},echo)=>{
     console.log({body});
-    CircuitTraining.create(parse(body)).then(endorphins=>{
+    CircuitTraining.create(body).then(endorphins=>{
         echo.json(endorphins)
     }).catch(injury=>{
-        echo.status(400).json(injury);
+        echo.json(injury);
     })
 });
+compass.put('/api/workout/:id',(ask,echo)=>{
+    const {id}=ask.params;
+    const {body}=ask;
+    CircuitTraining.updateOne(
+        {_id:id},
+        {$push:{exercises:body}}
+    ).then(endorphins=>echo.json(endorphins))
+        .catch(strain=>echo.json(strain));
+})
     module.exports=compass;
