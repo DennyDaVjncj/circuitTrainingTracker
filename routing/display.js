@@ -5,6 +5,6 @@ compass.get('/exercise',(ask,echo)=>{
     echo.sendFile(pathways.join(__dirname,'../public/exercise.html'))
 });
 compass.get('/stats',(ask,echo)=>{
-    echo.sendFile(path.join(__dirname,'../public/stats.html'))
+    echo.sendFile(pathways.join(__dirname,'../public/stats.html'))
 })
     module.exports=compass;
