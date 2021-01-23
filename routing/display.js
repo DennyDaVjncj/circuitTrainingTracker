@@ -1,16 +1,11 @@
 const compass=require('express').Router();
+const pathways=require('path');
 const CircuitTraining=require('../models/workout');
 
-compass.get('/exercise',async(ask,echo)=>{
-    try{
-        const exerciseData=await CircuitTraining.findAll({
-            body
-            //im just fetching the model data in essence
-        })
-        echo.json(exerciseData)
-        console.log('let me see what all the fuss is about: '+exerciseData);
-    }catch(strain){
-        echo.status(500).json(strain.message);
-    }
+compass.get('/exercise',(ask,echo)=>{
+    echo.sendFile(pathways.join(__dirname,'../public/exercise.html'))
 });
+compass.get('/stats',(ask,echo)=>{
+    echo.sendFile(path.join(__dirname,'../public/stats.html'))
+})
     module.exports=compass;
