@@ -1,5 +1,6 @@
 const wildAnimal=require('mongoose');
 const Schema=wildAnimal.Schema;
+const opts = { toJSON: { virtuals: true } };//tutors suggest
 
 const Workout=new Schema({
     day:{
@@ -26,9 +27,10 @@ const Workout=new Schema({
             distance:Number
         },
     ]
-})
+},opts)
+Workout.virtual('totalDuration').get(function() {
+    //return the total duration of all the exercises within schema, use 'this.exercises', use 4loop
+  });
+  
 const CircuitTraining=wildAnimal.model('workout',Workout);
 module.exports=CircuitTraining;
-
-//take my time and progress through this
-//research mongoose virtual properties
