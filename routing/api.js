@@ -1,15 +1,23 @@
 const compass=require('express').Router();
 const CircuitTraining=require('../models/workout');
 
-compass.get('/api/workout',(ask,echo)=>{
+compass.get('/api/workouts',(ask,echo)=>{
     CircuitTraining.find({})
         .then(shortIntervalHighVelocity=>{
             echo.json(shortIntervalHighVelocity);
         }).catch(strain=>{
             echo.json(strain.message);
         })
-})
-compass.post('/api/workout',({body},echo)=>{
+});
+compass.get('/api/workouts/range',(ask,echo)=>{
+    CircuitTraining.find({})
+        .then(shortIntervalHighVelocity=>{
+            echo.json(shortIntervalHighVelocity);
+        }).catch(strain=>{
+            echo.json(strain.message);
+        })
+});
+compass.post('/api/workouts',({body},echo)=>{
     console.log({body});
     CircuitTraining.create(body).then(endorphins=>{
         echo.json(endorphins)
@@ -17,13 +25,18 @@ compass.post('/api/workout',({body},echo)=>{
         echo.json(injury);
     })
 });
-compass.put('/api/workout/:id',(ask,echo)=>{
-    const {id}=ask.params;
-    const {body}=ask;
-    CircuitTraining.updateOne(
-        {_id:id},
-        {$push:{exercises:body}}
-    ).then(endorphins=>echo.json(endorphins))
-        .catch(strain=>echo.json(strain));
-})
-    module.exports=compass;
+compass.put("/api/workouts/:id",(ask,echo)=>{
+    CircuitTraining.findByIdAndUpdate(
+        ask.params.id,
+        {
+            $push: {
+                exercises: ask.body,
+            },
+        },
+        {
+            new:true
+        }).then((updatedWorkout) => {
+            echo.json(updatedWorkout);
+        }).catch((err) => echo.json(err.message));
+    });       
+        module.exports=compass;
