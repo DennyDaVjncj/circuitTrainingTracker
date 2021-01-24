@@ -30,7 +30,6 @@ const Workout=new Schema({
 },opts)
 Workout.virtual('totalDuration').get(function() {
     //return the total duration of all the exercises within schema, use 'this.exercises', use 4loop
-  });
-  
+  });  
 const CircuitTraining=wildAnimal.model('workout',Workout);
 module.exports=CircuitTraining;
