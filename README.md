@@ -1,60 +1,37 @@
-# Unit 17 NoSQL Homework: Circuit Training Tracker
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
 
-## User Story
+  
+  # Circuit Training Tracker
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+  # Description:
+  An app aimed at tracking a user's workout data. Providing graphical breakdown's of a user's activity, all based on their input of course
 
-## Business Context
+  # Table of Contents:
+  - [Description](#description)
+  - [Installation Guidlines](#installation-guidlines)
+  - [Application Usage](#use)
+  - [License In Use](#license-in-use)
+  - [How to Contribute to This Already Stellar App](#contribution-Guidlines)
+  - [Tests](#how-to-run-tests)
+  - [Questions](#questions)
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+  # Installation Guidlines:
+  To install this app you can go to my Github profile & clone down from there
 
-## Acceptance Criteria
+  # Use:
+  This app will help millions of people around the world hold their self accountable in reaching certain milestones etc...
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+  # How To Run Tests:
+  npm run test
 
-The user should be able to:
+  # License in use:
+  This project uses the following license: [Boost Software License 1.0]().
+  
+  ![License](https://img.shields.io/badge/License-Boost%20Software%20License%201.0-blue.svg)
 
-  * Add exercises to the most recent workout plan.
+  # Contribution Guidlines:
+  If you wish to contribute to this repo, grab yourself a 'fork' & dig in. Make whatever changes you see fit, then submit a merge request!
 
-  * Add new exercises to a new workout plan.
-
-  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
-
-  * View the total duration of each workout from the past seven workouts on the `stats` page.
-
-> **Important:** Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/), the [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/), and the [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
-
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
-
-  * [Set Up MongoDB Atlas](../supplemental/mongo_atlas_setup.md)
-
-  * [Deploy with Heroku and MongoDB Atlas](../supplemental/mongo_atlas_deploy.md)
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We want you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+  # Questions:
+  Github Profile: [Denny da Vjncj](https://www.github.com/DennydaVjncj)
+  
+  Feel free to reach out: daVjncjCode@gmail.com
