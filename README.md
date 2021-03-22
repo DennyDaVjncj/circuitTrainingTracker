@@ -3,7 +3,7 @@
   # ```💱 Circuit Training Tracker```: https://stormy-tundra-80286.herokuapp.com/?id=600ccffa14955b0015415ea5
 
   # Description:
-  An app aimed at tracking a user's workout data. Providing graphical breakdown's of a user's activity, all based on their input of course
+  An app aimed at tracking a user's workout data; providing graphical breakdowns of a user's activity, all based on their input
   
   ![w17 submission](https://user-images.githubusercontent.com/62162419/105635435-ca46a280-5e30-11eb-9f92-3099cbe9fca4.PNG)
 
